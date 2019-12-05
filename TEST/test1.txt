@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-12-05T12:25:40+09:00
+
+====== test1 ======
+Created 목요일 05 12월 2019
+
+==== Notes-public ====
+{{{code: lang="sh" linenumbers="True"
+git init
+git remote add origin https://github.com/gongjak/Notes-public
+git config --global user.name "gongjak"
+git config --global user.email "gongjak@gmail.com" 
+}}}
