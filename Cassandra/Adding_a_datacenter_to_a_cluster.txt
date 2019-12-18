@@ -17,5 +17,6 @@ Created 수요일 18 12월 2019
 		1. 사용자가 만든 모든 항목
 		2. 시스템: system_distributed, system_auth, system_traces
 		이 단계는 지정된 소스 데이터 센터에 이러한 keyspaces의 복제가 nodetool rebuild에서 필요하기 때문에 multiple datacenter clusters에 필요합니다.
-	b. 새로운 datacenter에서, 각각의 새로운 노드에 Cassandra를 설치합니다. 
+	b. replication factor가 0인 새로운 datacenter를 생성합니다.
+3. 새로운 datacenter에서, 각각의 새로운 노드에 Cassandra를 설치합니다. 
 
