@@ -32,3 +32,8 @@ CREATE KEYSPACE "sample-ks" WITH REPLICATION =
 {{{code: lang="sql" linenumbers="True"
 select * from loadbalancer.configuration;
 }}}
+
+{{{code: lang="sql" linenumbers="True"
+CREATE KEYSPACE "sample-ks" WITH REPLICATION =
+{ 'class' : 'NetworkTopologyStrategy', 'ExistingDC' : 3 , 'NewDC' : 0};
+}}}
