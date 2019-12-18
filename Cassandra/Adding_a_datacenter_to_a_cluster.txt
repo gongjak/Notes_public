@@ -29,11 +29,8 @@ CREATE KEYSPACE "sample-ks" WITH REPLICATION =
 4. 클러스터의 다른 노드를 구성한 후 각 새 노드에 cassandra.yaml 을 구성합니다.
 	a. 클러스터의 다른 노드에 있는 cassandra.yaml 파일의 설정과 일치하도록 -seeds 와 endpoint_snitch 같은 cassandra.yaml 의 값을 설정하십시오.  [[https://docs.datastax.com/en/cassandra-oss/3.x/cassandra/initialize/initMultipleDS.html|Initializing a multiple node cluster (multiple datacenters)]] 를 참조하십시오.
 
-{{{code: lang="sql" linenumbers="True"
-select * from loadbalancer.configuration;
-}}}
 
-{{{code: lang="sql" linenumbers="True"
-CREATE KEYSPACE "sample-ks" WITH REPLICATION =
-{ 'class' : 'NetworkTopologyStrategy', 'ExistingDC' : 3 , 'NewDC' : 0};
-}}}
+
+
+
+
