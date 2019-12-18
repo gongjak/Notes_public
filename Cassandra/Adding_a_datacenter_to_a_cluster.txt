@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2019-12-18T11:03:56+09:00
+
+====== Adding a datacenter to a cluster ======
+Created 수요일 18 12월 2019
+
+====== 절차 ======
+1. 이전 데이터 파일이 새로운 클러스터를 방해하지 않는지 확인합니다.
+	a. 이전 데이터가 포함된 다른 클러스터 또는 데이터센터에서 기존(실행중인) 노드를 제거합니다.
+	b. 노드를 올바르게 정리합니다.
+	c. 응용 프로그램 디렉토리를 완전히 제거합니다 (권장)
+	d. 제거 후 Cassandra를 처음부터 설치합니다.
+
+2. Keyspaces를 구성하고 새 datacenter를 생성합니다.
+	a. 다음 keyspaces에 대해 NetworkTopologyStrategy를 사용하기 위해 ALTER KEYSPACE 를 사용합니다.
+		1. 사용자가 만든 모든 항목
+		2. 시스템: system_distributed, system_auth, system_traces
+		이 단계는 지정된 소스 데이터 센터에 이러한 keyspaces의 복제가 nodetool rebuild에서 필요하기 때문에 multiple datacenter clusters에 필요합니다.
+	b. 새로운 datacenter에서, 각 
+
